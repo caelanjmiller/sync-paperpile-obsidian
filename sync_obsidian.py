@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+from sys import argv
 import bibtexparser
 import json
 import os
@@ -15,12 +15,9 @@ This version preserves user notes when updating files.
 """
 
 # Configuration
-# BIB_PATH = 'references_TEST.bib'
-BIB_PATH = 'references.bib'
+OBSIDIAN_VAULT_PATH = argv[1]
+BIB_PATH = argv[2]
 ARCHIVE_PATH = 'obsidian_archive.json'
-
-# Set your Obsidian vault path here - update this to your actual vault path
-OBSIDIAN_VAULT_PATH = os.path.expanduser('~/Documents/Obsidian Vault')  # Change this!
 PAPERS_FOLDER = 'Papers'
 
 
